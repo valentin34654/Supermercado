@@ -1,0 +1,71 @@
+package vale;
+import java.util.Scanner;
+public class Administrador {
+	
+	public static void main(String[] args) {	
+		alimento ali = new alimento(null, 0, null, null);
+		ropa rop = new ropa (null, 0, null, null, null);
+		electronica elec = new electronica(null, 0, null, null, null);
+		Scanner lector = new Scanner(System.in);
+		
+		System.out.println("Hola usuario disfrute su estadia en el programa");
+		
+		System.err.println("1_ALIMENTO");
+		System.out.println("Nombre del Alimento: ");
+		String nomA = lector.next();
+		System.out.println("Precio del Alimento:");
+		int preA = lector.nextInt();
+		System.out.println("Marca del Alimento: ");
+		String marA = lector.next();
+		System.out.println("Ingrese la fecha de cadusidad: ");
+		String fecha = lector.next();
+		
+		ali.setNombre(nomA);
+		ali.setPrecio(preA);
+		ali.setMarca(marA);
+		ali.setFechaCaducidad(fecha);
+		
+		System.err.println("1_ROPA");
+		System.out.println("Nombre de la prenda ¿que tipo es?: ");
+		String nomR = lector.next();
+		System.out.println("Precio de la ropa:");
+		int preR = lector.nextInt();
+		System.out.println("Marca de la ropa: ");
+		String marR = lector.next();
+		System.out.println("Ingrese la talla de su ropa: ");
+		String talla = lector.next();
+		System.out.println("Ingrese que logo tiene la prenda: ");
+		String logo = lector.next();
+		
+		rop.setNombre(nomR);
+		rop.setPrecio(preR);
+		rop.setMarca(marR);
+		rop.setTalla(talla);
+		rop.setLogo(logo);
+		
+		System.err.println("1_ELECTRONICA");
+		System.out.println("Nombre del objeto tecnologico: ");
+		String nomE = lector.next();
+		System.out.println("Precio del aparato:");
+		int preE = lector.nextInt();
+		System.out.println("Marca del producto tecnoloico: ");
+		String marE = lector.next();
+		System.out.println("Ingrese el tipo del producto tecnologico: ");
+		String tipoE = lector.next();
+		System.out.println("Que modelo es tu equipo tecnologico: ");
+		String modelo = lector.next();
+		
+		elec.setNombre(nomE);
+		elec.setPrecio(preE);
+		elec.setMarca(marE);
+		elec.setTipo(tipoE);
+		elec.setModelo(modelo);
+		
+		System.out.println("Nombre de alimento: "+nomA+", Precio del Alimento: "+preA+", Marca del Alimento: "+marA+", Fecha de caducidad: "+fecha);
+		System.out.println("Nombre o tipo de Prenda: "+nomR+", Precio de la Ropa: "+preR+", Marca de la Ropa: "+marR+", La Talla de la Ropa: "+talla+", y el logo quu tiene es "+logo);
+		System.out.println("El nombre del objeto Tecnologico es: "+nomE+", Precio: "+preE+", La Marca del Preducto es: "+marE+", El Modelo del Producto Tecnologico es: "+tipoE+" y el modelo es "+modelo );
+		System.out.println("El total a pagar es "+(preA+preR+preE)+", efectivo o tarjeta");
+		System.out.println("se nos daño el sistema te regalamos los productos");
+	}
+
+}
